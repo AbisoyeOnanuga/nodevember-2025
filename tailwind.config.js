@@ -7,12 +7,12 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                title: ['Anton', 'sans-serif'],
-                body: ['Inter', 'sans-serif'],
+                title: ['var(--font-title)', 'sans-serif'],
+                body: ['var(--font-body)', 'sans-serif'],
             },
-            }
-            ,
+        }
+        ,
     },
     plugins: [],
-    }
+}
   
