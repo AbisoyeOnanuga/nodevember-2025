@@ -1,6 +1,13 @@
-import type { Metadata } from "next";
+import './globals.css'
+import { Ubuntu } from 'next/font/google'
 import { Anton } from 'next/font/google'
 import { Inter } from 'next/font/google'
+
+const ubuntu = Ubuntu({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-ubuntu',
+})
 
 const anton = Anton({
   subsets: ['latin'],
@@ -13,11 +20,6 @@ const inter = Inter({
   variable: '--font-body',
 })
 
-export const metadata = {
-  title: 'Nodivember 2025',
-  description: 'Unofficial prompt list for the revived Nodevember challenge',
-}
-
 export default function RootLayout({
   children,
 }: {
@@ -25,13 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Anton&family=Inter&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className={`${anton.variable} ${inter.variable} antialiased`}>
+      <body
+        className={`${ubuntu.variable} ${anton.variable} ${inter.variable} bg-bg text-fg antialiased`}
+      >
         {children}
       </body>
     </html>
