@@ -36,7 +36,7 @@ export default function PromptGrid() {
     <section className="prompt-grid">
       <div className="grid grid-cols-3 gap-x-8 gap-y-10">
         {blocks.map((block, i) => (
-          <div key={i} className="prompt-block p-1">
+          <div key={i} className="prompt-block">
             <div className={`prompt-label ${block.labelColor}`}>{block.label}</div>
             <ul className="prompt-list">
               {block.prompts.map((prompt, j) => (
