@@ -33,26 +33,19 @@ const blocks = [
 
 export default function PromptGrid() {
   return (
-    <section className="max-w-6xl mx-auto bg-[#111] rounded-2xl p-6 md:p-10 lg:p-12">
-      <div className="grid grid-cols-3 gap-6">
+    <section className="prompt-grid">
+      <div className="grid grid-cols-3 gap-x-8 gap-y-10">
         {blocks.map((block, i) => (
-          <div key={i} className="rounded-xl overflow-hidden shadow-md">
-            {/* Label bar */}
-            <div className={`${block.labelColor} text-white text-center py-2 font-bold text-lg`}>
-              {block.label}
-            </div>
-
-            {/* Prompt list block */}
-            <div className="bg-[#333]">
-              <ul className="divide-y divide-[#111]">
-                {block.prompts.map((prompt, j) => (
-                  <li key={j} className="px-4 py-5 flex justify-between text-[#ddd]">
-                    <span>{i * 5 + j + 1}.</span>
-                    <span>{prompt}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div key={i} className="prompt-block p-1">
+            <div className={`prompt-label ${block.labelColor}`}>{block.label}</div>
+            <ul className="prompt-list">
+              {block.prompts.map((prompt, j) => (
+                <li key={j} className="prompt-item">
+                  <span>{i * 5 + j + 1}.</span>
+                  <span>{prompt}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>

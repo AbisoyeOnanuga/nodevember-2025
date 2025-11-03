@@ -1,25 +1,42 @@
 import PromptGrid from '../components/PromptGrid'
 import Instructions from '../components/Instructions'
 import Links from '../components/Links'
+import Footer from '../components/Footer'
 
 export default function Page() {
   return (
-    <main className="max-w-4xl mx-auto p-6">
-      <section className="bg-[#222] py-10 text-center rounded-b-lg mb-10">
-        <h1 className="text-[6rem] font-title font-extrabold text-white tracking-wide leading-none mb-2">
-          NODEVEMBER
-        </h1>
-        <p className="text-xl font-body text-[#ddd]">
-          Unofficial 2025 Prompt List
-        </p>
+    <>
+      {/* Full-width banner */}
+      <section className="w-full bg-[#222] py-10 text-center rounded-b-lg">
+        <div className="inline-block text-left leading-tight">
+          <h1
+            className="text-[6rem] font-title font-extrabold tracking-wide mb-0"
+            style={{
+              color: 'var(--nodevember-color)',     
+              marginBlockStart: '0.67em',
+              marginBlockEnd: '0.02em',
+             }}
+          >
+            NODEVEMBER
+          </h1>
+          <p className="text-[1.25rem] font-body text-[#ddd] text-right pr-[0.25rem] mt-[0.1rem] leading-none">
+            Unofficial 2025 Prompt List
+          </p>
+        </div>
       </section>
-      
-      <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
-        A community-led revival of the node-based art challenge. 30 prompts, 30 days, infinite creativity.
-      </p>
-      <PromptGrid />
-      <Instructions />
-      <Links />
-    </main>
+
+      {/* Main content */}
+      <main className="max-w-4xl mx-auto p-6">
+        <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+          A community-led revival of the node-based art challenge. 30 prompts, 30 days, infinite creativity.
+        </p>
+        <PromptGrid />
+        <Instructions />
+        <Links />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </>
   )
 }
