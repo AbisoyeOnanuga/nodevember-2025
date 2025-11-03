@@ -19,14 +19,10 @@ export const metadata = {
   description: 'Community prompt list and showcase for the revived Nodevember challenge',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${anton.variable} ${inter.variable} bg-[#333] text-[#bcbcbc]`}>
         {children}
       </body>
     </html>
