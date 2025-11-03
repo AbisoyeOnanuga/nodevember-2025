@@ -16,12 +16,12 @@ module.exports = {
     },
   },
   safelist: [
-    'bg-green-500',
-    'bg-amber-500',
-    'bg-stone-500',
-    'bg-blue-500',
-    'bg-purple-500',
-    'bg-pink-500',
+    'bg-green-700',
+    'bg-amber-700',
+    'bg-stone-700',
+    'bg-blue-700',
+    'bg-purple-700',
+    'bg-pink-700',
   ],
   plugins: [],
 }
