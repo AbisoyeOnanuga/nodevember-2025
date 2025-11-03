@@ -4,23 +4,22 @@ import Links from '../components/Links'
 
 export default function Page() {
   return (
-    <>
-      {/* Full-width banner */}
-      <section className="w-full bg-[#bc1010] py-14 text-center rounded-b-2xl">
-        <h1 className="text-[7rem] font-title font-extrabold text-white tracking-wide leading-none mb-2">
+    <main className="max-w-4xl mx-auto p-6">
+      <section className="bg-[#222] py-10 text-center rounded-b-lg mb-10">
+        <h1 className="text-[6rem] font-title font-extrabold text-white tracking-wide leading-none mb-2">
           NODEVEMBER
         </h1>
         <p className="text-xl font-body text-[#ddd]">
           Unofficial 2025 Prompt List
         </p>
       </section>
-
-      {/* Constrained content */}
-      <main className="max-w-[90rem] mx-auto px-6 md:px-10 lg:px-12">
-        <PromptGrid />
-        <Instructions />
-        <Links />
-      </main>
-    </>
+      
+      <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+        A community-led revival of the node-based art challenge. 30 prompts, 30 days, infinite creativity.
+      </p>
+      <PromptGrid />
+      <Instructions />
+      <Links />
+    </main>
   )
 }

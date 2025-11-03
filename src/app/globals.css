@@ -2,22 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Nodevember Dark Theme Variables */
 :root {
-  --bg-color: #111; /* Darker page background */
-  --content-bg-color: #18181b; /* zinc-900 */
-  --fg-color: #a1a1aa; /* zinc-400 */
-  --fg-bright-color: #e4e4e7; /* zinc-200 */
+  --bg-color: #333;
+  --content-bg-color: #222;
+  --fg-color: #bcbcbc;
+  --fg-bright-color: #ddd;
   --nodevember-color: #bc1010;
 }
 
-/* Global Body Styling */
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: var(--font-body), sans-serif;
   font-size: 100%;
   background-color: var(--bg-color);
   color: var(--fg-color);
