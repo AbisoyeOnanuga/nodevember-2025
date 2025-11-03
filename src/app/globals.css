@@ -4,16 +4,16 @@
 
 /* Nodevember Dark Theme Variables */
 :root {
-  --bg-color: #333;
-  --content-bg-color: #222;
-  --fg-color: #bcbcbc;
-  --fg-bright-color: #ddd;
+  --bg-color: #111; /* Darker page background */
+  --content-bg-color: #18181b; /* zinc-900 */
+  --fg-color: #a1a1aa; /* zinc-400 */
+  --fg-bright-color: #e4e4e7; /* zinc-200 */
   --nodevember-color: #bc1010;
 }
 
 /* Global Body Styling */
 body {
-  font-family: var(--font-ubuntu), sans-serif;
+  font-family: sans-serif;
   font-size: 100%;
   background-color: var(--bg-color);
   color: var(--fg-color);

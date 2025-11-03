@@ -1,13 +1,7 @@
 import './globals.css'
-import { Ubuntu } from 'next/font/google'
 import { Anton } from 'next/font/google'
 import { Inter } from 'next/font/google'
-
-const ubuntu = Ubuntu({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-ubuntu',
-})
+import type { Metadata } from 'next'
 
 const anton = Anton({
   subsets: ['latin'],
@@ -32,9 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${ubuntu.variable} ${anton.variable} ${inter.variable} bg-bg text-fg antialiased`}
-      >
+      <body>
         {children}
       </body>
     </html>
