@@ -20,6 +20,11 @@ const inter = Inter({
   variable: '--font-body',
 })
 
+export const metadata = {
+  title: 'Nodevember Unofficial 2025',
+  description: 'Community prompt list and showcase for the revived Nodevember challenge',
+}
+
 export default function RootLayout({
   children,
 }: {
