@@ -12,6 +12,10 @@
 }
 
 /* Global Body Styling */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
   font-size: 100%;

@@ -21,5 +21,13 @@ module.exports = {
         },
       },
     },
+    safelist: [
+      'bg-green-500',
+      'bg-amber-500',
+      'bg-stone-500',
+      'bg-blue-500',
+      'bg-purple-500',
+      'bg-pink-500',
+    ],
     plugins: [],
 }
