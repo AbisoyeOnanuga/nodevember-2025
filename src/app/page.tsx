@@ -7,10 +7,10 @@ export default function Page() {
   return (
     <>
       {/* Full-width banner */}
-      <section className="w-full bg-[#222] py-10 text-center rounded-b-lg">
-        <div className="inline-block text-left leading-tight">
+      <section className="banner w-full bg-[#222] py-10 text-center rounded-b-lg px-4">
+        <div className="inline-block text-left leading-tight max-w-full overflow-hidden">
           <h1
-            className="text-[6rem] font-title font-extrabold tracking-wide mb-0"
+            className="font-title font-extrabold tracking-wide mb-0"
             style={{
               color: 'var(--nodevember-color)',     
               marginBlockStart: '0.67em',
@@ -19,7 +19,7 @@ export default function Page() {
           >
             NODEVEMBER
           </h1>
-          <p className="text-[1.25rem] font-body text-[#ddd] text-right pr-[0.25rem] mt-[0.1rem] leading-none">
+          <p className="font-body text-[#ddd] text-right pr-1 mt-1 leading-none">
             Unofficial 2025 Prompt List
           </p>
         </div>
