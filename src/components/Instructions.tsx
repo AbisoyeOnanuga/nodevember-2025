@@ -5,7 +5,7 @@ export default function Instructions() {
         <ul className="list-disc pl-6 space-y-2">
           <li>Create a node-based artwork inspired by each daily prompt.</li>
           <li>Use any software of choice: Blender, Houdini, Unreal, TouchDesigner, etc.</li>
-          <li>Make sure your work is <strong>procedural</strong>.</li>
+          <li>Have <strong>fun</strong> with your artwork.</li>
           <li>Tag your posts with <strong>#Nodevember</strong> and <strong>#Nodevember2025</strong>.</li>
           <li>Optional: Submit your work to be featured on this site.</li>
         </ul>
