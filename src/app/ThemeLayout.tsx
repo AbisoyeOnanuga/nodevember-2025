@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { Classic } from '@theme-toggles/react'
-import '@theme-toggles/react/css/Classic.css'
+import { ThemeToggle } from '@/components/ThemeToggle'
 
 export default function ThemeLayout({ children }: { children: React.ReactNode }) {
   const [isLightMode, setIsLightMode] = useState(false)
@@ -18,22 +17,9 @@ export default function ThemeLayout({ children }: { children: React.ReactNode })
 
   return (
     <div>
-      <Classic
-        toggled={isLightMode}
-        toggle={setIsLightMode}
-        duration={750}
-        aria-label="Toggle theme"
-        title="Toggle theme"
-        className="absolute top-6 right-6 z-50 transition-transform hover:rotate-180"
-        style={{
-          fontSize: '2rem',
-          color: isLightMode ? '#999' : '#ddd',
-          background: 'none',
-          border: 'none',
-          marginTop: '1rem',
-          marginRight: '1rem',
-        }}
-      />
+      <div className="fixed top-0 left-0 w-full z-50">
+        <ThemeToggle toggled={isLightMode} toggle={setIsLightMode} />
+      </div>
       {children}
     </div>
   )

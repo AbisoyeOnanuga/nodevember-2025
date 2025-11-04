@@ -126,21 +126,56 @@ a:hover {
   background-color: #2a2a2a;
 }
 
+/* Theme toggle base styles */
 .theme-toggle {
-  transition: transform 0.3s ease;
-  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #888; /* grey for X */
   background: none;
+  border: none;
   cursor: pointer;
+  transition: transform 0.4s ease, color 0.3s ease;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 50;
 }
 
+/* Hover effect */
 .theme-toggle:hover {
-  transform: rotate(180deg);
+  transform: scale(1.1) rotate(10deg);
+  color: #aaa;
 }
 
-.theme-toggle__classic {
-  transition: all 0.5s ease;
-  display: block;
-  animation: none !important; /* disables bounce */
+/* Spin animation for X */
+.theme-toggle.spin-x {
+  animation: spinX 0.6s ease-in-out;
+}
+
+@keyframes spinX {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pulse animation for O */
+.theme-toggle.pulse-o {
+  animation: pulseO 0.4s ease-in-out;
+}
+
+@keyframes pulseO {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Layout wrapper for main content only */
