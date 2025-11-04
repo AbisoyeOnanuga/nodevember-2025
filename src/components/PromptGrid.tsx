@@ -38,11 +38,12 @@ type CheckedState = boolean[][]
 
 export default function PromptGrid() {
   const [checked, setChecked] = useState<CheckedState>(() => {
-    const stored = localStorage.getItem('promptChecks')
-    return stored
-      ? JSON.parse(stored)
-      : blocks.map(block => block.prompts.map(() => false))
-  })
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('promptChecks')
+      return stored ? JSON.parse(stored) : blocks.map(block => block.prompts.map(() => false))
+    }
+    return blocks.map(block => block.prompts.map(() => false))
+  })  
 
   useEffect(() => {
     localStorage.setItem('promptChecks', JSON.stringify(checked))
