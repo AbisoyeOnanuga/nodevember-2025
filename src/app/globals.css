@@ -10,6 +10,14 @@
   --nodevember-color: #bc1010;
 }
 
+/* Light mode override */
+[data-theme="light"] {
+  --bg-color: #fff;
+  --content-bg-color: #f5f5f5;
+  --fg-color: #222; /* matches banner/footer dark tone */
+  --fg-bright-color: #444;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -41,22 +49,13 @@ a:hover {
   border-radius: 1rem;
   padding: 2rem;
   margin-top: 2.5rem;
-}
-
-.prompt-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.75rem 0;
-  color: #ddd;
-  border-bottom: 1px solid #111;
-}
-
-.prompt-item:last-child {
-  border-bottom: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem; /* consistent horizontal and vertical spacing */
 }
 
 .prompt-block {
-  background-color: #333;
+  background-color: #222;
   border-radius: 0.75rem;
   overflow: hidden;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
@@ -70,6 +69,26 @@ a:hover {
   border-top-left-radius: 0.75rem;
   border-top-right-radius: 0.75rem;
   color: #fff;
+}
+
+/* Label color classes */
+.label-green { background-color: #15803d; }     /* Tailwind green-700 */
+.label-amber { background-color: #b45309; }     /* Tailwind amber-700 */
+.label-stone { background-color: #57534e; }     /* Tailwind stone-700 */
+.label-blue  { background-color: #1d4ed8; }     /* Tailwind blue-700 */
+.label-purple{ background-color: #6b21a8; }     /* Tailwind purple-700 */
+.label-pink  { background-color: #be185d; }     /* Tailwind pink-700 */
+
+.prompt-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  color: #ddd;
+  border-bottom: 1px solid #111;
+}
+
+.prompt-item:last-child {
+  border-bottom: none;
 }
 
 .prompt-list {
@@ -86,4 +105,21 @@ a:hover {
 
 .prompt-item:last-child {
   border-bottom: none;
+}
+
+.theme-toggle {
+  transition: transform 0.3s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  transform: rotate(180deg);
+}
+
+.theme-toggle__classic {
+  transition: all 0.5s ease;
+  display: block;
+  animation: none !important; /* disables bounce */
 }
