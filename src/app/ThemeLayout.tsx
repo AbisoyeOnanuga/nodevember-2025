@@ -24,13 +24,14 @@ export default function ThemeLayout({ children }: { children: React.ReactNode })
         duration={750}
         aria-label="Toggle theme"
         title="Toggle theme"
-        className="fixed top-4 right-4 z-50 transition-transform hover:rotate-180"
+        className="fixed top-6 right-6 z-50 transition-transform hover:rotate-180"
         style={{
           fontSize: '2rem',
           color: isLightMode ? '#999' : '#ddd',
           background: 'none',
           border: 'none',
-          padding: 0,
+          marginTop: '1rem',
+          marginRight: '1rem',
         }}
       />
       {children}

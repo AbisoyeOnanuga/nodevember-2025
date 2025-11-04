@@ -123,3 +123,50 @@ a:hover {
   display: block;
   animation: none !important; /* disables bounce */
 }
+
+/* Layout wrapper for main content only */
+.page-content {
+  max-width: 72rem; /* same as max-w-6xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .page-content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .prompt-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .prompt-block {
+    padding: 1rem;
+  }
+
+  .banner h1 {
+    font-size: 3rem !important;
+  }
+
+  .banner p {
+    font-size: 1rem !important;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+}
