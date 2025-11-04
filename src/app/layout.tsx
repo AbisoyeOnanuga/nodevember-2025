@@ -1,7 +1,8 @@
+// app/layout.tsx
 import './globals.css'
 import { Anton } from 'next/font/google'
 import { Inter } from 'next/font/google'
-import type { Metadata } from 'next'
+import ThemeLayout from './ThemeLayout'
 
 const anton = Anton({
   subsets: ['latin'],
@@ -15,16 +16,21 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Nodevember Unofficial 2025',
-  description: 'Community prompt list and showcase for the revived Nodevember challenge',
+  title: 'Unofficial Nodevember 2025',
+  description: 'A community-curated prompt list and creative tracker for Nodevember 2025.',
+  icons: {
+    icon: '/favicon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body className={`${anton.variable} ${inter.variable} bg-[#333] text-[#bcbcbc]`}>
-        {children}
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en" className={`${anton.variable} ${inter.variable}`}>
+            <body>
+                <ThemeLayout>
+                    {children}
+                </ThemeLayout>
+            </body>
+        </html>
+    )
 }
