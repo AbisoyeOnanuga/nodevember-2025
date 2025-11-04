@@ -64,15 +64,17 @@ export default function PromptGrid() {
           <div className={`prompt-label ${block.labelClass}`}>{block.label}</div>
           <ul className="prompt-list">
             {block.prompts.map((prompt, j) => (
-              <li key={j} className="prompt-item">
-                <input
-                  type="checkbox"
-                  checked={checked[i][j]}
-                  onChange={() => toggleCheck(i, j)}
-                  className="mr-2"
-                />
-                <span className={checked[i][j] ? 'line-through opacity-50' : ''}>
-                  {i * 5 + j + 1}. {prompt}
+              <li key={j} className="prompt-item flex items-start gap-2">
+                <span className="w-6 text-right">
+                  {i * 5 + j + 1}.
+                  <input
+                    type="checkbox"
+                    checked={checked[i][j]}
+                    onChange={() => toggleCheck(i, j)}
+                  />
+                </span>
+                <span className={checked[i][j] ? 'line-through opacity- text-right' : 'text-right'}>
+                  {prompt}
                 </span>
               </li>
             ))}

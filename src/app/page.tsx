@@ -26,14 +26,16 @@ export default function Page() {
       </section>
 
       {/* Main content */}
-      <main className="max-w-4xl mx-auto p-6">
-        <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
-          A community-led revival of the node-based art challenge. 30 prompts, 30 days, infinite creativity.
-        </p>
-        <PromptGrid />
-        <Instructions />
-        <Links />
-      </main>
+      <div className="max-w-6xl mx-auto px-4">
+        <main className="max-w-4xl mx-auto p-6">
+          <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">
+            A community-led revival of the node-based art challenge. 30 prompts, 30 days, infinite creativity.
+          </p>
+          <PromptGrid />
+          <Instructions />
+          <Links />
+        </main>
+      </div>
 
       {/* Footer */}
       <Footer />
