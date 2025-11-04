@@ -71,6 +71,7 @@ export default function PromptGrid() {
                       type="checkbox"
                       checked={checked[i][j]}
                       onChange={() => toggleCheck(i, j)}
+                      className="w-5 h-5 accent-bright"
                     />
                   </span>
 
