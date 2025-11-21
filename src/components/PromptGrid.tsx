@@ -37,14 +37,20 @@ const blocks = [
 type CheckedState = boolean[][]
 
 export default function PromptGrid() {
-  const [checked, setChecked] = useState<CheckedState>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('promptChecks')
-      return stored ? JSON.parse(stored) : blocks.map(block => block.prompts.map(() => false))
-    }
-    return blocks.map(block => block.prompts.map(() => false))
-  })  
+  // Initialize state to a default that works on both server and client.
+  const [checked, setChecked] = useState<CheckedState>(() =>
+    blocks.map(block => block.prompts.map(() => false)),
+  )
 
+  // This effect runs on the client after mount to load the saved state.
+  useEffect(() => {
+    const stored = localStorage.getItem('promptChecks')
+    if (stored) {
+      setChecked(JSON.parse(stored))
+    }
+  }, []) // Empty dependency array ensures this runs only once on mount.
+
+  // This effect saves the state to localStorage whenever it changes.
   useEffect(() => {
     localStorage.setItem('promptChecks', JSON.stringify(checked))
   }, [checked])
